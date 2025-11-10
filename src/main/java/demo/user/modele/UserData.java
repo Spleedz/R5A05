@@ -1,4 +1,4 @@
-package com.example.accessingdatamysql;
+package demo.user.modele;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity // This tells Hibernate to make a table out of this class
-public class User {
+public class UserData {
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO)
   private Integer id;
