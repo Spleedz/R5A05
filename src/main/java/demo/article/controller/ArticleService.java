@@ -15,9 +15,6 @@ public class ArticleService {
 
     public void addArticle(Date publicationDate, User author, String content) {
         Article a = new Article(publicationDate, author, content);
-        a.setPublicationDate(publicationDate);
-        a.setAuthor(author);
-        a.setContent(content);
         articleRepository.save(a.toData());
     }
 
@@ -31,10 +28,7 @@ public class ArticleService {
 
     public void editArticle(Integer id, Date publicationDate, User author, String content) {
         Article a = new Article(publicationDate, author, content);
-        a.setId(id);
-        a.setPublicationDate(publicationDate);
-        a.setAuthor(author);
-        a.setContent(content);        
+        a.setId(id);      
         articleRepository.save(a.toData());
     }
 
